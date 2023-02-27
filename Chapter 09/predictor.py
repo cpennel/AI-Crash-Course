@@ -11,7 +11,7 @@ from keras.models import Sequential
 from keras.optimizers import Adam
 
 # Importing the dataset
-dataset = pd.read_csv('kc_house_data.csv')
+dataset = pd.read_csv('/Users/christophe/Documents/GitHub/AI-Crash-Course/Chapter 09/kc_house_data.csv')
 
 # Getting separately the features and the targets
 X = dataset.iloc[:, 3:].values
