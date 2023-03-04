@@ -8,7 +8,7 @@ import numpy as np
 
 # Defining the parameters
 nLastStates = 4
-filepathToOpen = 'model.h5'
+filepathToOpen = 'D:\_Cloud\GitHub\AI-Crash-Course\Chapter 13\model.h5'
 slowdown = 75
 
 # Creating the Environment and the Brain
