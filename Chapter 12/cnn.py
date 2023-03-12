@@ -30,7 +30,11 @@ classifier.add(Dense(units = 128, activation = 'relu'))
 classifier.add(Dense(units = 1, activation = 'sigmoid'))
 
 # Step 5 - Compiling the CNN
-classifier.compile(optimizer = 'adam', loss = 'binary_crossentropy', metrics = ['accuracy'])
+classifier.compile(optimizer = 'adam', loss = 'binary_crossentropy', metrics = ['accuracy'])       
+
+
+from keras.utils import plot_model
+plot_model(classifier, to_file='test.png', show_shapes=True)
 
 # Part 2 - Training the CNN
 
