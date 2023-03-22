@@ -3,11 +3,18 @@
 # Part 1 - Building the CNN
 
 # Importing the Keras libraries and packages
-from keras.models import Sequential
-from keras.layers import Conv2D
+import tensorflow as tf
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense
+
+
+""" 
 from keras.layers import MaxPooling2D
 from keras.layers import Flatten
-from keras.layers import Dense
+from keras.layers import Dense 
+"""
+
+tf.device('/device:GPU:0')
 
 # Initialising the CNN
 classifier = Sequential()
@@ -59,7 +66,7 @@ test_set = test_datagen.flow_from_directory(r'dataset/test_set',
 
 classifier.fit(training_set,
                          steps_per_epoch = 240,
-                         epochs = 100,
+                         epochs = 150,
                          validation_data = test_set,
                          validation_steps = 2000)
 
